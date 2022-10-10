@@ -1,14 +1,18 @@
-## 1.线性回归
 
-#加载训练集和数据集
-#识别特征和响应变量，值必须是数字和numpy数组
-x_train <- input_variables_values_training_datasets
-y_train <- target_variables_values_training_datasets
-x_test <- input_variables_values_test_datasets
-x <- cbind(x_train,y_train)
-# 使用训练集训练模型并检查分数
-linear <- lm(y_train ~ ., data = x)
-summary(linear)
-# 输出预测
-predicted= predict(linear,x_test) 
+ 一般说来，机器学习有三种算法：
+ 1. 监督式学习
 
+包括一个目标变量（因变量）和用来预测目标变量的预测变量（自变量，解释变量）。
+通过这些变量我们可以搭建一个模型，从而对于一个已知的预测变量值，我们可以得到对应的目标变量值。重复训练这个模型，直到它能在训练数据集上达到预定的准确度。
+属于监督式学习的算法有：回归模型，决策树，随机森林，K邻近算法，逻辑回归等。
+
+ 2. 无监督式学习
+
+无监督学习没有需要预测或估计的目标变量。
+无监督式学习是用来对总体对象进行分类的。
+属于无监督式学习的算法有：关联规则，K-means聚类算法等。
+
+ 3. 强化学习
+
+这个算法可以训练程序做出某一决定。程序在某一情况下尝试所有的可能行动，记录不同行动的结果并试着找出最好的一次尝试来做决定。
+属于这一类算法的有马尔可夫决策过程。
